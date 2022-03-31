@@ -33,7 +33,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     price = models.PositiveIntegerField(verbose_name="Narxi")
     image = models.ImageField(verbose_name="Rasmi", blank=True, null=True)
-    desciption = models.CharField(max_length=255, verbose_name="Qisqacha")
+    description = models.CharField(max_length=255, verbose_name="Qisqacha")
     big_description = ArrayField(
         models.CharField(max_length=255, blank=True),
         size=8, null=True

@@ -14,4 +14,4 @@ class ProductSerializer(serializers.ModelSerializer):
     big_description = serializers.ListField(child=serializers.CharField())
     class Meta:
         model = Product
-        fields = ('id', 'title', 'category', 'price', 'image', 'desciption', 'big_description')
+        fields = ('id', 'title', 'category', 'price', 'image', 'description', 'big_description')
