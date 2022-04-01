@@ -38,7 +38,7 @@ class Product(models.Model):
     description = models.CharField(max_length=255, verbose_name="Qisqacha")
     big_description = ArrayField(
         models.CharField(max_length=255, blank=True),
-        size=20, null=True
+        size=100, null=True
     )
 
     def __str__(self) -> str:
