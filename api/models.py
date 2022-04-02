@@ -34,7 +34,10 @@ class Product(models.Model):
     title = models.CharField(max_length=50, verbose_name="Nomi")
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     price = models.PositiveIntegerField(verbose_name="Narxi")
-    image = models.ImageField(verbose_name="Rasmi", blank=True, null=True)
+    image01 = models.CharField(max_length=100, verbose_name="Rasm1")
+    image02 = models.CharField(max_length=100, verbose_name="Rasm2")
+    image03 = models.CharField(max_length=100, verbose_name="Rasm3")
+    image04 = models.CharField(max_length=100, verbose_name="Rasm4")
     description = models.CharField(max_length=300, verbose_name="Qisqacha")
     big_description = ArrayField(
         models.CharField(max_length=455, blank=True),
