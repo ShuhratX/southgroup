@@ -32,7 +32,7 @@ class Product(models.Model):
         verbose_name_plural = "Maxsulotlar"
 
     title = models.CharField(max_length=50, verbose_name="Nomi")
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="products")
     price = models.PositiveIntegerField(verbose_name="Narxi")
     image01 = models.CharField(max_length=100, verbose_name="Rasm1")
     image02 = models.CharField(max_length=100, verbose_name="Rasm2")

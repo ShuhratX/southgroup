@@ -1,7 +1,9 @@
+from unicodedata import category
 from django.shortcuts import render
-from rest_framework.generics import ListCreateAPIView, RetrieveAPIView, RetrieveUpdateAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveAPIView, RetrieveUpdateAPIView, GenericAPIView
+from rest_framework.response import Response
 from .models import Category, Product
-from .serializers import CategorySerializer, ProductSerializer
+from .serializers import CategorySerializer, ProductSerializer, CategoryDetailSerializer
 
 class CategoryView(ListCreateAPIView):
     queryset = Category.objects.all()
@@ -9,8 +11,8 @@ class CategoryView(ListCreateAPIView):
 
 
 class CategoryDetailView(RetrieveAPIView):
+    serializer_class = CategoryDetailSerializer
     queryset = Category.objects.all()
-    serializer_class = CategorySerializer
 
 
 class ProductView(ListCreateAPIView):
