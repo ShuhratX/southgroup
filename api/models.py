@@ -15,7 +15,7 @@ class Category(models.Model):
         verbose_name_plural = "Kategoriyalar"
 
     name = models.CharField(max_length=50, verbose_name="Nomi")
-    image = models.ImageField(verbose_name="Rasmi")
+    image = models.CharField(max_length=100, verbose_name="Rasmi")
 
 
     def __str__(self) -> str:
