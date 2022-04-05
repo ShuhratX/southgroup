@@ -16,6 +16,7 @@ class Category(models.Model):
 
     name = models.CharField(max_length=50, verbose_name="Nomi")
     image = models.CharField(max_length=100, verbose_name="Rasmi")
+    header_image = models.CharField(max_length=100, verbose_name="Karusel rasmi")
 
 
     def __str__(self) -> str:
