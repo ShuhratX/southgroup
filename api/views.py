@@ -6,7 +6,7 @@ from .models import Category, Product
 from .serializers import CategorySerializer, ProductSerializer, CategoryDetailSerializer
 
 class CategoryView(ListCreateAPIView):
-    queryset = Category.objects.all()
+    queryset = Category.objects.all().order_by('id')
     serializer_class = CategorySerializer
 
 
@@ -16,7 +16,7 @@ class CategoryDetailView(RetrieveAPIView):
 
 
 class ProductView(ListCreateAPIView):
-    queryset = Product.objects.all()
+    queryset = Product.objects.all().order_by('id')
     serializer_class = ProductSerializer
 
 
