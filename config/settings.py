@@ -148,5 +148,3 @@ CORS_ALLOWED_ORIGINS = [
     "https://southgroup.netlify.app"
     "southgroup.netlify.app",
 ]
-
-CORS_ALLOW_CREDENTIALS= True
