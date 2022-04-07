@@ -33,8 +33,8 @@ ALLOWED_HOSTS = [
     ".herokuapp.com",
     "127.0.0.1", 
     "http://localhost:3000/", 
-    ".netlify.app"
-    "southgroup.netlify.app"]
+    "southgroup.netlify.app"
+    ]
 
 
 # Application definition
@@ -146,5 +146,4 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://127.0.0.1:8000",
     "https://southgroup.netlify.app"
-    "southgroup.netlify.app",
 ]
