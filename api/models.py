@@ -39,7 +39,9 @@ class Product(models.Model):
     image02 = models.CharField(max_length=100, verbose_name="Rasm2")
     image03 = models.CharField(max_length=100, verbose_name="Rasm3")
     image04 = models.CharField(max_length=100, verbose_name="Rasm4")
-    description = models.CharField(max_length=300, verbose_name="Qisqacha")
+    description = ArrayField(
+        models.CharField(max_length=255, blank=True),
+        size=15, null=True, verbose_name="Qisqacha")
     big_description = ArrayField(
         models.CharField(max_length=455, blank=True),
         size=100, null=True
