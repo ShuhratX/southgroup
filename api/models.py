@@ -1,5 +1,4 @@
 from email.mime import image
-from multiprocessing.dummy import Array
 from statistics import mode
 from unicodedata import category
 from django.db import models
@@ -42,12 +41,12 @@ class Product(models.Model):
     image02 = models.CharField(max_length=100, verbose_name="Rasm2")
     image03 = models.CharField(max_length=100, verbose_name="Rasm3")
     image04 = models.CharField(max_length=100, verbose_name="Rasm4")
-    description = ArrayField(
-        ArrayField(
+    description_key = ArrayField(
         models.CharField(max_length=255, blank=True),
-        size=15),
-        size=8, verbose_name="Qisqacha"
-        )
+        size=15, verbose_name="Qisqacha nomi")
+    description_value = ArrayField(
+        models.CharField(max_length=255, blank=True),
+        size=15, verbose_name="Qisqacha qiymati")
     big_description = ArrayField(
         models.CharField(max_length=455, blank=True),
         size=100, null=True
