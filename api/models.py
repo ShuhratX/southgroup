@@ -29,6 +29,8 @@ class Product(models.Model):
 
         db_table = 'products'
 
+        ordering = ('id',)
+
         verbose_name = "Maxsulot"
         verbose_name_plural = "Maxsulotlar"
 
